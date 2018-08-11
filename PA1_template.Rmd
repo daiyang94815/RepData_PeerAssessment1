@@ -21,7 +21,7 @@ library(tidyverse)
   summarise(total_steps = sum(steps)))
 ```
 2. Histogram of the total number of steps taken each day
-```{r Histogram of the total number of steps taken each day}
+```{r Histogram_of_the_total_number_of_steps_taken_each_day}
 with(total_steps, hist(total_steps, main = "Histogram of total steps per day", xlab = "Total steps per day"))
 ```
 ```{r}
@@ -34,7 +34,7 @@ The median of the total number of steps taken per day is `r median_steps` steps.
 
 ## What is the average daily activity pattern?
 4. Time series plot of the average number of steps taken
-```{r Time series plot of the average number of steps taken}
+```{r Time_series_plot_of_the_average_number_of_steps_taken}
 avg_steps <- activity %>%
   group_by(interval) %>%
   summarise(avg_steps = mean(steps, na.rm = T))
@@ -71,7 +71,7 @@ activity_NA_imputed[is.na(activity_NA_imputed$steps),] <- activity_NA_imputed %>
 activity_NA_imputed
 ```
 7. Histogram of the total number of steps taken each day after missing values are imputed
-```{r Histogram of the total number of steps taken each day after missing values are imputed}
+```{r Histogram_of_the_total_number_of_steps_taken_each_day_after_missing_values_are_imputed}
 total_steps_NA_imputed <- activity_NA_imputed %>%
   group_by(date) %>%
   summarise(total_steps = sum(steps))
@@ -89,7 +89,7 @@ Both mean and median total number of steps taken per day are slightly smaller th
 
 ## Are there differences in activity patterns between weekdays and weekends?
 8. Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends
-```{r Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends, message=FALSE, warning=FALSE}
+```{r Panel_plot_comparing_the_average_number_of_steps_taken_per_5-minute_interval_across_weekdays_and_weekends, message=FALSE, warning=FALSE}
 library(lubridate)
 
 activity_NA_imputed %>% 

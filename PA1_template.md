@@ -45,7 +45,7 @@ library(tidyverse)
 with(total_steps, hist(total_steps, main = "Histogram of total steps per day", xlab = "Total steps per day"))
 ```
 
-![](PA1_template_files/figure-html/Histogram of the total number of steps taken each day-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram_of_the_total_number_of_steps_taken_each_day-1.png)<!-- -->
 
 ```r
 mean_steps <- mean(total_steps$total_steps, na.rm = T)
@@ -68,7 +68,7 @@ avg_steps %>%
     geom_line()
 ```
 
-![](PA1_template_files/figure-html/Time series plot of the average number of steps taken-1.png)<!-- -->
+![](PA1_template_files/figure-html/Time_series_plot_of_the_average_number_of_steps_taken-1.png)<!-- -->
 
 5. The 5-minute interval that, on average, contains the maximum number of steps
 
@@ -132,7 +132,7 @@ total_steps_NA_imputed <- activity_NA_imputed %>%
 with(total_steps_NA_imputed, hist(total_steps, main = "Histogram of total steps per day", xlab = "Total steps per day"))
 ```
 
-![](PA1_template_files/figure-html/Histogram of the total number of steps taken each day after missing values are imputed-1.png)<!-- -->
+![](PA1_template_files/figure-html/Histogram_of_the_total_number_of_steps_taken_each_day_after_missing_values_are_imputed-1.png)<!-- -->
 
 
 ```r
@@ -158,5 +158,5 @@ activity_NA_imputed %>%
   labs(y = "Number of steps")
 ```
 
-![](PA1_template_files/figure-html/Panel plot comparing the average number of steps taken per 5-minute interval across weekdays and weekends-1.png)<!-- -->
+![](PA1_template_files/figure-html/Panel_plot_comparing_the_average_number_of_steps_taken_per_5-minute_interval_across_weekdays_and_weekends-1.png)<!-- -->
 
